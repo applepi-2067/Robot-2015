@@ -113,6 +113,14 @@ AddOutputFilter chunkFilter
 		<Item Name="Custom VIs" Type="Folder">
 			<Item Name="Lift.vi" Type="VI" URL="../Lift.vi"/>
 		</Item>
+		<Item Name="Gyro" Type="Folder">
+			<Item Name="Get Double Gyro.vi" Type="VI" URL="../Gyro/Get Double Gyro.vi"/>
+			<Item Name="Get Gyro.vi" Type="VI" URL="../Gyro/Get Gyro.vi"/>
+			<Item Name="Gyro Global.vi" Type="VI" URL="../Gyro/Gyro Global.vi"/>
+			<Item Name="Open Gyro.vi" Type="VI" URL="../Gyro/Open Gyro.vi"/>
+			<Item Name="Reset Gyro.vi" Type="VI" URL="../Gyro/Reset Gyro.vi"/>
+			<Item Name="Update Gyro.vi" Type="VI" URL="../Gyro/Update Gyro.vi"/>
+		</Item>
 		<Item Name="navX" Type="Folder">
 			<Item Name="COMMON" Type="Folder">
 				<Item Name="TypeDefs" Type="Folder"/>
@@ -720,7 +728,6 @@ AddOutputFilter chunkFilter
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Get Double Gyro.vi" Type="VI" URL="../Gyro/Get Double Gyro.vi"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
