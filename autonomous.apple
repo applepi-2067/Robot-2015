@@ -1,0 +1,63 @@
+//Team 2067 Autonomous Code
+//Written in AppleScript
+
+automode 5 //testing stuffs
+	drive at 0,0.4,0; for 1
+	shoot until shooter is resetting
+	switch reverse Harvester Lift
+	shoot finish
+	wait for 1
+	drive at 0,-0.4,0; for 1
+end
+
+automode 0 //nothing
+end
+
+automode 1 //mobility
+	drive at 0,0,0.2 for 1.5 //drive forward
+end
+
+automode 2 //one ball without vision
+	drive at 0,0.45,0; for 1.75     //drive forward
+	shoot                           //shoot
+	switch reverse Harvester Lift   //put harvester up
+	drive at 0,-1,0; for 0.5         //drive back
+end
+
+automode 3 //one ball with vision
+	drive at 0,0.45,0; for 1.75             //drive forward
+	switch forward Harvester Lift          //put harvester down
+	run motor Harvester; at -0.5; for 0.7  //roll harvester in to retain ball
+	wait until goal is hot                 //wait until goal is hot
+	shoot                                  //shoot
+	switch reverse Harvester Lift          //put harvester up
+	drive at 0,-1,0; for 0.5               //drive back
+end
+
+automode 4 //two ball
+	switch forward Harvester Lift                //drop the harvester
+	run motor Harvester; at -0.4; for 0.6        //roll harvester in to retain ball
+	group 2
+	    drive at 0,0.52,0; for 1.6               //drive forward
+	    run motor Harvester; at -0.65            //while running the harvester in
+	run motor Harvester; at 0; for 0             //stop harvester
+	drive at 0,-0.3,0; for 0.25                  //stop driving	              
+	shoot until shooter is resetting             //shoot the ball, wait until resetting
+	group 3
+	    drive at 0,-0.5,0; for 0.5               //drive backward
+	    run motor Harvester; at -1               //while running harvester at full speed
+	    shoot continue                           //and resetting the shooter
+	group 3  
+	    drive at 0,0.3,0; for 0.25               //stop driving
+	    run motor Harvester; at -1               //while running harvester at full speed
+	    shoot continue                           //and resetting the shooter   
+	group 2
+	    run motor Harvester; at -1; for 0.4      //run harvester at full speed
+	    shoot continue                           //while resetting the shooter
+	switch reverse Harvester Lift                //put up the harvester
+	group 2
+	    drive at 0,0.5,0; for 0.5                //drive forward
+	    run motor Harvester; at -0.7             //while running the harvester in
+	run motor Harvester; at -0.5; until has ball //keep harvesting until there is a ball
+	shoot                                        //shoot second ball
+end
