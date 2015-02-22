@@ -1,19 +1,98 @@
-//Team 2067 Autonomous Code
 //Written in AppleScript
 
-automode 0
+automode 0 //test, without recycling containers
 	lift to 1
-	group 2
-		drive at 0,0.4,0; for 0.5
-		harvest at -0.5
-	harvest at -0.5; for 0.8
+	switch forward Harvester
+	harvest at -0.5; for 1
+	wait for 0.25 //just to be safe
 	lift to 4
-	drive at 0.7,0,0; for 0.8
-	drive at 0,0.7,0; for 1
-	drive at -0.7,0,0; for 0.8
-	drive at 0.5,0,0; for 0.2
-end	
-
-automode 1
-	drive at 0,0,40; for 20
+	wait until level reached
+	switch reverse Harvester
+	group 2
+		drive to 0,67,0; at 0.4
+		harvest at -0.5
+	switch forward Harvester
+	harvest at -0.5; for 1
+	lift to 1	
+	wait for 0.1
+	wait until level reached
+	lift to 4
+	wait for 0.1
+	wait until level reached
+	switch reverse Harvester
+	group 2
+		drive to 0,67,0; at 0.4
+		harvest at -0.5
+	switch forward Harvester
+	harvest at -0.5; for 1
+	lift to 1
+	wait for 0.1
+	wait until level reached
+	lift to 2
+	wait for 0.1
+	wait until level reached
 end
+
+automode 1 
+	lift to 1
+	switch forward Harvester
+	harvest at -0.5; for 1
+	wait for 0.25 //just to be safe
+	lift to 4
+	wait until level reached
+	switch reverse Harvester
+	drive to 16,0,0; at 0.5
+	drive to 0,50,0; at 0.5
+	drive to -16,0,0; at 0.5
+	group 2
+		drive to 0,15,0; at 0.5
+		harvest at -0.5
+	switch forward Harvester
+	harvest at -0.5; for 1
+	lift to 1	
+	wait for 0.1
+	wait until level reached
+	lift to 4
+	wait for 0.1
+	wait until level reached
+	switch reverse Harvester
+	drive to 16,0,0; at 0.5
+	drive to 0,50,0; at 0.5
+	drive to -16,0,0; at 0.5
+	group 2
+		drive to 0,15,0; at 0.5
+		harvest at -0.5
+	switch forward Harvester
+	harvest at -0.5; for 1
+	lift to 1	
+	wait for 0.1
+	wait until level reached
+	lift to 2
+	wait for 0.1
+	wait until level reached
+	drive to 36,0,0; at 0.5
+	lift to 1
+	wait for 0.1
+	wait until level reached
+	switch reverse Harvester
+	drive to 0,-24,0; at 0.5
+end
+
+	lift to 1	
+	wait for 0.1
+	wait until level reached
+	lift to 4
+	wait for 0.1
+	wait until level reached
+	switch reverse Harvester
+	group 2
+		drive to 0,67,0; at 0.4
+		harvest at -0.5
+	switch forward Harvester
+	harvest at -0.5; for 1
+	lift to 1
+	wait for 0.1
+	wait until level reached
+	lift to 2
+	wait for 0.1
+	wait until level reached
