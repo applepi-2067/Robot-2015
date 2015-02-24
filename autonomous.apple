@@ -39,6 +39,7 @@ automode 1
 	harvest at -0.5; for 1
 	wait for 0.25 //just to be safe
 	lift to 4
+	//wait for 0.1
 	wait until level reached
 	switch reverse Harvester
 	drive to 16,0,0; at 0.5
@@ -50,10 +51,10 @@ automode 1
 	switch forward Harvester
 	harvest at -0.5; for 1
 	lift to 1	
-	wait for 0.1
+	//wait for 0.1
 	wait until level reached
 	lift to 4
-	wait for 0.1
+	//wait for 0.1
 	wait until level reached
 	switch reverse Harvester
 	drive to 16,0,0; at 0.5
@@ -65,14 +66,14 @@ automode 1
 	switch forward Harvester
 	harvest at -0.5; for 1
 	lift to 1	
-	wait for 0.1
+	//wait for 0.1
 	wait until level reached
 	lift to 2
-	wait for 0.1
+	//wait for 0.1
 	wait until level reached
 	drive to 36,0,0; at 0.5
 	lift to 1
-	wait for 0.1
+	//wait for 0.1
 	wait until level reached
 	switch reverse Harvester
 	drive to 0,-24,0; at 0.5
