@@ -82,7 +82,37 @@ end
 automode 2
 	lift to 1
 	wait until level reached
-	
+	switch forward Harvester
+	harvest at -0.5; for 0.5
+	switch reverse Harvester
+	lift to 4
+	group 2
+		drive at 0,0.18,0
+		harvest at -0.5; until distance=65
+	switch forward Harvester
+	group 2
+		drive at 0,0.18,0
+		harvest at -0.5; for 0.5
+	lift to 1
+	drive at 0,0.18,0; until level reached
+	lift to 4
+	//wait for 1
+	group 2
+		drive at 0,0.18,0
+		harvest at -0.5; until distance=140
+	switch forward Harvester
+	group 2
+		drive at 0,0.18,0
+		harvest at -0.5; for 1
+	drive at 0,0,0; for 0.1
+	lift to 1
+	wait until level reached
+	lift to 4
+	drive at 0,0,0; for 0.2
+end
+
+automode 3
+	lift to 4
 end
 
 //nonsense
