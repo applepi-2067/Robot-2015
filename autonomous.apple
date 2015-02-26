@@ -33,7 +33,7 @@ automode 0 //test, without recycling containers
 	wait until level reached
 end
 
-automode 1 
+automode 1 //going around recycling containers
 	lift to 1
 	switch forward Harvester
 	harvest at -0.5; for 1
@@ -79,6 +79,13 @@ automode 1
 	drive to 0,-24,0; at 0.5
 end
 
+automode 2
+	lift to 1
+	wait until level reached
+	
+end
+
+//nonsense
 	lift to 1	
 	wait for 0.1
 	wait until level reached

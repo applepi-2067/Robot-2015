@@ -101,10 +101,11 @@ AddOutputFilter chunkFilter
 			<Item Name="Commands" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="CMD_Drive.vi" Type="VI" URL="../AppleScript/Commands/CMD_Drive.vi"/>
-				<Item Name="CMD_Harvest.vi" Type="VI" URL="../AppleScript/Commands/CMD_Harvest.vi"/>
 				<Item Name="CMD_Switch.vi" Type="VI" URL="../AppleScript/Commands/CMD_Switch.vi"/>
 				<Item Name="CMD_Wait.vi" Type="VI" URL="../AppleScript/Commands/CMD_Wait.vi"/>
 				<Item Name="CMD_Lift.vi" Type="VI" URL="../AppleScript/Commands/CMD_Lift.vi"/>
+				<Item Name="CMD_Harvest.vi" Type="VI" URL="../AppleScript/Commands/CMD_Harvest.vi"/>
+				<Item Name="CMD_Run.vi" Type="VI" URL="../AppleScript/Commands/CMD_Run.vi"/>
 				<Item Name="Command Template.vi" Type="VI" URL="../AppleScript/Commands/Command Template.vi"/>
 			</Item>
 			<Item Name="AppleScript Main.vi" Type="VI" URL="../AppleScript/AppleScript Main.vi"/>
