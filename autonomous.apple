@@ -1,85 +1,32 @@
 //Written in AppleScript
 
-automode 0 //test, without recycling containers
+automode 0 //one tote
 	lift to 1
+	wait until level reached
 	switch forward Harvester
-	harvest at -0.5; for 1
-	wait for 0.25 //just to be safe
+	harvest at -0.5; for 0.5
 	lift to 4
-	wait until level reached
-	switch reverse Harvester
-	group 2
-		drive to 0,67,0; at 0.4
-		harvest at -0.5
-	switch forward Harvester
-	harvest at -0.5; for 1
-	lift to 1	
-	wait for 0.1
-	wait until level reached
-	lift to 4
-	wait for 0.1
-	wait until level reached
-	switch reverse Harvester
-	group 2
-		drive to 0,67,0; at 0.4
-		harvest at -0.5
-	switch forward Harvester
-	harvest at -0.5; for 1
+	wait until off ground
+	drive to -100,0,0; at 0.4 //slide to the right
 	lift to 1
-	wait for 0.1
-	wait until level reached
-	lift to 2
-	wait for 0.1
-	wait until level reached
 end
 
-automode 1 //going around recycling containers
+automode 1 //one tote, knockdown
 	lift to 1
+	wait until level reached
 	switch forward Harvester
-	harvest at -0.5; for 1
-	wait for 0.25 //just to be safe
+	harvest at -0.5; for 0.5
 	lift to 4
-	//wait for 0.1
-	wait until level reached
-	switch reverse Harvester
-	drive to 16,0,0; at 0.5
-	drive to 0,50,0; at 0.5
-	drive to -16,0,0; at 0.5
-	group 2
-		drive to 0,15,0; at 0.5
-		harvest at -0.5
-	switch forward Harvester
-	harvest at -0.5; for 1
-	lift to 1	
-	//wait for 0.1
-	wait until level reached
-	lift to 4
-	//wait for 0.1
-	wait until level reached
-	switch reverse Harvester
-	drive to 16,0,0; at 0.5
-	drive to 0,50,0; at 0.5
-	drive to -16,0,0; at 0.5
-	group 2
-		drive to 0,15,0; at 0.5
-		harvest at -0.5
-	switch forward Harvester
-	harvest at -0.5; for 1
-	lift to 1	
-	//wait for 0.1
-	wait until level reached
-	lift to 2
-	//wait for 0.1
-	wait until level reached
-	drive to 36,0,0; at 0.5
+	wait until off ground
+	drive at 0,0,75; for 2.5
+	drive to 0,-12,75; at 0.7
+	drive to 0,36,75; at 1 //slam RC
+	drive to 64,0,75; at 0.4 //move forward
 	lift to 1
-	//wait for 0.1
-	wait until level reached
-	switch reverse Harvester
-	drive to 0,-24,0; at 0.5
+	reset gyro
 end
 
-automode 2
+automode 2 //3 tote smooth, no RC
 	lift to 1
 	wait until level reached
 	switch forward Harvester
@@ -87,22 +34,22 @@ automode 2
 	switch reverse Harvester
 	lift to 4
 	group 2
-		drive at 0,0.18,0
+		drive at 0,0.35,0
 		harvest at -0.5; until distance=65
 	switch forward Harvester
 	group 2
-		drive at 0,0.18,0
+		drive at 0,0.35,0
 		harvest at -0.5; for 0.5
 	lift to 1
-	drive at 0,0.18,0; until level reached
+	drive at 0,0.35,0; until level reached
 	lift to 4
 	//wait for 1
 	group 2
-		drive at 0,0.18,0
+		drive at 0,0.35,0
 		harvest at -0.5; until distance=140
 	switch forward Harvester
 	group 2
-		drive at 0,0.18,0
+		drive at 0,0.35,0
 		harvest at -0.5; for 1
 	drive at 0,0,0; for 0.1
 	lift to 1
@@ -111,9 +58,7 @@ automode 2
 	drive at 0,0,0; for 0.2
 end
 
-automode 3
-	lift to 4
-end
+
 
 //nonsense
 	lift to 1	

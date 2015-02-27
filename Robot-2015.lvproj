@@ -27,6 +27,7 @@
 		<Property Name="host.ResponsivenessCheckPingTimeout" Type="UInt">1000</Property>
 		<Property Name="host.TargetCPUID" Type="UInt">8</Property>
 		<Property Name="host.TargetOSID" Type="UInt">8</Property>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="target.cleanupVisa" Type="Bool">false</Property>
 		<Property Name="target.DoNotReboot" Type="Bool">true</Property>
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
@@ -125,6 +126,9 @@ AddOutputFilter chunkFilter
 			<Item Name="Reset Yaw.vi" Type="VI" URL="../Reset Yaw.vi"/>
 			<Item Name="Timed Task.vi" Type="VI" URL="../Timed Task.vi"/>
 		</Item>
+		<Item Name="Support Code" Type="Folder">
+			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
+		</Item>
 		<Item Name="navX" Type="Folder">
 			<Item Name="COMMON" Type="Folder">
 				<Item Name="TypeDefs" Type="Folder"/>
@@ -147,9 +151,6 @@ AddOutputFilter chunkFilter
 				<Item Name="TypeDefs" Type="Folder"/>
 			</Item>
 			<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../navX-MXP Library/navX-MXP IMU.lvlib"/>
-		</Item>
-		<Item Name="Support Code" Type="Folder">
-			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
 		</Item>
 		<Item Name="Swerve Drive" Type="Folder">
 			<Item Name="Angle Distance.vi" Type="VI" URL="../Swerve Drive/Angle Distance.vi"/>
