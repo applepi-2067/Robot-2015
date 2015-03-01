@@ -7,8 +7,9 @@ automode 0 //one tote
 	harvest at -0.5; for 0.5
 	lift to 4
 	wait until off ground
-	drive to -100,0,0; at 0.4 //slide to the right
+	drive to 132,0,0; at 0.5 //slide to the right, was 124 before
 	lift to 1
+	reset gyro 90
 end
 
 automode 1 //one tote, knockdown
@@ -20,8 +21,8 @@ automode 1 //one tote, knockdown
 	wait until off ground
 	drive at 0,0,75; for 2.5
 	drive to 0,-12,75; at 0.7
-	drive to 0,36,75; at 1 //slam RC
-	drive to 64,0,75; at 0.4 //move forward
+	drive to 0,38,75; at 1 //slam RC
+	drive to 132,0,75; at 0.4 //move forward
 	lift to 1
 	reset gyro
 end
@@ -58,10 +59,20 @@ automode 2 //3 tote smooth, no RC
 	drive at 0,0,0; for 0.2
 end
 
+automode 3 //push RC
+	lift to 1
+	drive to 155,0,0; at 0.5 //move forward
+	reset gyro 90
+end
 
+automode 4 //move (from landfill side)
+	lift to 0
+	drive to 0,58,0; at 0.45
+	reset gyro 180 //ayy lmao
+end
 
 //nonsense
-	lift to 1	
+	lift to 1
 	wait for 0.1
 	wait until level reached
 	lift to 4
