@@ -60,8 +60,9 @@ automode 2 //3 tote smooth, no RC
 end
 
 automode 3 //push RC
+	reset encoders
 	lift to 1
-	drive to 155,0,0; at 0.5 //move forward
+	drive to 155,0,0; at 0.45 //move forward
 	reset gyro 90
 end
 
