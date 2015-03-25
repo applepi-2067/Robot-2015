@@ -1,7 +1,7 @@
 Competition
 BL: 72
 BR: 45 
-FL: -20
+FL: -27
 FR: -37
 
 Practice:
