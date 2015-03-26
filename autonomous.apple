@@ -27,9 +27,10 @@ automode 1 //one tote, knockdown
 	reset gyro
 end
 
-automode 2 //3 tote smooth, no RC
+automode 2 //zach moskow mode (3 tote)
 	switch reverse Harvester
 	lift to 4
+	wait for 2
 	group 2
 		drive at 0,0.25,0
 		harvest at -0.7; until distance=65
@@ -41,16 +42,17 @@ automode 2 //3 tote smooth, no RC
 	group 2
 		drive at 0,0.1,0
 		harvest at -0.5; for 1
-	drive at 0,0.2,0; until level reached
+	drive at 0,0.12,0; until level reached
 	switch reverse Harvester
 	lift to 4
+	drive at 0,0.12,0; for 0.5
 	group 2
 		drive at 0,0.25,0
 		harvest at -0.7; until distance=140
 	switch forward Harvester
 	group 2
 		drive at 0,0.25,0
-		harvest at -0.7; for 1
+		harvest at -0.65; for 1
 	drive at 0,0,0; for 0.1
 	lift to 1
 	wait until level reached

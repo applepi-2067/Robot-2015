@@ -1,22 +1,24 @@
-<head><version>2.72.9</version></head>
+<head><version>2.72.16</version></head>
 <function>
 <function_name>Tote</function_name>
 <function_always_run>0</function_always_run>
-<Camera_Properties>
-  <brightness_map>BLOB_FILTER_END_COUNT</brightness_map>
-  <brightness_value>30</brightness_value>
-  <camera>Microsoft LifeCam HD-3000</camera>
-  <contrast_value>5</contrast_value>
-  <force_settings>FALSE</force_settings>
-  <horizontal_flip>FALSE</horizontal_flip>
-  <saturation_value>101</saturation_value>
-  <software_auto_exposure>FALSE</software_auto_exposure>
-  <vertical_flip>FALSE</vertical_flip>
-  <video_format>YUY2</video_format>
-  <video_rate>30</video_rate>
-  <video_size>320 x 240</video_size>
-  <whitebalance_value>4907</whitebalance_value>
-</Camera_Properties>
+<Axis_Internet_Camera>
+  <auto_back_light>FALSE</auto_back_light>
+  <auto_exposure>FALSE</auto_exposure>
+  <auto_white_balance>FALSE</auto_white_balance>
+  <brightness_value>45</brightness_value>
+  <color_level_value>60</color_level_value>
+  <contrast_value>58</contrast_value>
+  <exposure_value>53</exposure_value>
+  <ip_address>10.20.67.11</ip_address>
+  <is_active>TRUE</is_active>
+  <mirrot>FALSE</mirrot>
+  <password>FRC</password>
+  <port>80</port>
+  <resolution>640x480</resolution>
+  <sharpness_value>53</sharpness_value>
+  <username>FRC</username>
+</Axis_Internet_Camera>
 <Gaussian_Blur>
   <filter_size>7</filter_size>
   <theta>1.5</theta>
@@ -41,20 +43,20 @@
   <filters>
     <tab>
       <filter>
-        <count_threshold>0</count_threshold>
-        <create_array>0</create_array>
-        <filter_id>66</filter_id>
-        <invert_count>0</invert_count>
-        <invert_threshold>0</invert_threshold>
-        <weight_threshold>0.3</weight_threshold>
-      </filter>
-      <filter:2>
         <count_threshold>1</count_threshold>
         <create_array>0</create_array>
         <filter_id>21</filter_id>
         <invert_count>0</invert_count>
         <invert_threshold>0</invert_threshold>
         <weight_threshold>0</weight_threshold>
+      </filter>
+      <filter:2>
+        <count_threshold>0</count_threshold>
+        <create_array>0</create_array>
+        <filter_id>66</filter_id>
+        <invert_count>0</invert_count>
+        <invert_threshold>0</invert_threshold>
+        <weight_threshold>0.1</weight_threshold>
       </filter:2>
     </tab>
     <tab:2/>
