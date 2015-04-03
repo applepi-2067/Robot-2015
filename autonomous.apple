@@ -1,13 +1,14 @@
 //Written in AppleScript
 
-automode 0 //one tote
+automode 0 //one tote fun tote
 	lift to 1
 	wait until level reached
 	switch forward Harvester
 	harvest at -0.5; for 0.5
 	lift to 4
 	wait until off ground
-	drive to 134,0,0; at 0.5 //slide to the right
+	drive to 136,0,0; at 0.5 //slide to the right
+	switch reverse Harvester
 	lift to 1
 	reset gyro 90
 end
@@ -19,10 +20,11 @@ automode 1 //one tote, knockdown
 	harvest at -0.5; for 0.5
 	lift to 4
 	wait until off ground
-	drive at 0,0,75; for 2.5
-	drive to 0,-12,75; at 0.7
-	drive to 0,38,75; at 1 //slam RC
-	drive to 132,0,75; at 0.4 //move forward
+	drive at 0,0,80; for 2
+	drive to 0,-12,80; at 0.7
+	drive to 0,48,80; at 1 //slam RC
+	drive to 136,0,80; at 0.5 //move forward
+	switch reverse Harvester
 	lift to 1
 	reset gyro
 end
@@ -75,7 +77,7 @@ end
 automode 3 //push RC
 	reset encoders
 	lift to 1
-	drive to 160,0,0; at 0.45 //move forward
+	drive to 168,0,0; at 0.55 //move forward
 	reset gyro 90
 end
 
@@ -84,7 +86,7 @@ automode 4 //move (from landfill side)
 	drive to 0,58,0; at 0.45
 	reset gyro 180 //ayy lmao
 end
-
+-
 automode 5 //drive forward
 	lift to 0
 	drive to 0,144,0; at 0.3 //should be 72
@@ -92,11 +94,11 @@ end
 
 automode 6 //Operation Binstorm
 	lift to 0
-	drive at 0,-0.35,0; until distance=43
-	drive at 0,-0.15,0; for 0.8
+	drive at 0,-0.35,0; until distance=36
+	drive at 0,-0.18,0; for 0.8
 	switch forward Hook Left
 	switch forward Hook Right
-	wait for 1.5
+	wait for 1.3
 	drive to 0,122,0; at 0.6
 	switch reverse Hook Left
 	switch reverse Hook Right
@@ -126,16 +128,11 @@ automode 7 //RC test (DO NOT USE)
 	lift to 2
 end
 
-automode 8 //spin test (DO NOT USE)
-	lift to 7
-	wait for 0.5
-	wait until level reached
-	switch forward Harvester
-	group 3
-		drive at 0,0.33,0; until distance=48
-		run motor Harvester Left; at 1
-		run motor Harvester Right; at 1
-		
+automode 8 //move back from center forward
+	lift to 1
+	drive to 24,0,0; at 0.4
+	drive to 0,60,0; at 0.5
+	reset gyro 180
 end
 
 automode 9 //secure tote
