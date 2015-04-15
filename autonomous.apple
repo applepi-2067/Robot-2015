@@ -7,7 +7,7 @@ automode 0 //one tote fun tote
 	harvest at -0.5; for 0.5
 	lift to 4
 	wait until off ground
-	drive to 136,0,0; at 0.5 //slide to the right
+	drive to 138,0,0; at 0.5 //slide to the right
 	switch reverse Harvester
 	lift to 1
 	reset gyro 90
@@ -93,23 +93,27 @@ automode 5 //drive forward
 end
 
 automode 6 //Operation Binstorm
+	reset gyro
 	lift to 0
-	drive at 0,-0.35,0; until distance=36
-	drive at 0,-0.18,0; for 0.8
-	switch forward Hook Left
-	switch forward Hook Right
-	wait for 1.3
-	drive to 0,122,0; at 0.6
-	switch reverse Hook Left
-	switch reverse Hook Right
-	reset gyro 180
+	drive at -0.05,0,0; for 0.1
+	drive at -0.9,0,0; for 0.45
+	switch forward Hooks
+	drive at -0.2,0,0; for 0.5 //shorten at some point
+	reset encoders
+	drive at 0.7,0,0; until distance=85
+	drive at -0.5,0,0; for 0.25
+	//drive to 100,0,0; at 0.7
+	switch reverse Hooks
+	reset gyro -90
 end
 
 automode 7 //RC test (DO NOT USE)
 	switch reverse Harvester
+	switch reverse Harvester
 	lift to 7 // 3 tote mode
 	wait for 0.2 //fixes buggy stuff
 	wait until level reached
+	
 	switch forward Harvester
 	group 3
 		drive at 0,0.25,0; until distance=50
@@ -135,7 +139,12 @@ automode 8 //move back from center forward
 	reset gyro 180
 end
 
-automode 9 //secure tote
+automode 9 //do nothing
+	lift to 0
+	reset gyro -90
+end
+
+automode 10 //secure tote
 	lift to 1
 	wait until level reached
 	switch forward Harvester
