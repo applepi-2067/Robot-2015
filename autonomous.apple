@@ -29,7 +29,7 @@ automode 1 //one tote, knockdown
 	reset gyro
 end
 
-automode 2 //zach moskow mode (3 tote)
+automode 2 //screw zach moskow
 	switch reverse Harvester
 	lift to 4
 	wait for 2
