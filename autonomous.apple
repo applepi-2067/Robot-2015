@@ -92,7 +92,7 @@ automode 5 //drive forward
 	drive to 0,144,0; at 0.3 //should be 72
 end
 
-automode 6 //Operation Binstorm
+automode 6 //Operation Binstorm (OLD AND SLOW)
 	reset gyro
 	lift to 0
 	drive at -0.05,0,0; for 0.1
@@ -107,29 +107,14 @@ automode 6 //Operation Binstorm
 	reset gyro -90
 end
 
-automode 7 //RC test (DO NOT USE)
-	switch reverse Harvester
-	switch reverse Harvester
-	lift to 7 // 3 tote mode
-	wait for 0.2 //fixes buggy stuff
-	wait until level reached
-	
-	switch forward Harvester
-	group 3
-		drive at 0,0.25,0; until distance=50
-		run motor Harvester Left; at 1
-		run motor Harvester Right; at -1
-	switch reverse Harvester
-	group 2
-		drive at 0,0.33,0
-		harvest at -1; until distance=65
-	switch forward Harvester
-	group 2
-		drive at 0,0.33,0
-		harvest at -1; for 0.5
-	lift to 1
-	drive at 0,0.33,0; until level reached
-	lift to 2
+automode 7 //Operation Binstorm (Sanic Edition)
+	switch forward Hooks
+	sanic at -1,0,0; for 0.45
+	reset encoders
+	sanic at 1,0,0; until distance=82
+	sanic at -1,0,0; for 0.35
+	switch reverse Hooks
+	reset gyro -90
 end
 
 automode 8 //move back from center forward
