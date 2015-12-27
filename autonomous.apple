@@ -13,23 +13,14 @@ automode 0 //one tote fun tote
 	reset gyro 90
 end
 
-automode 1 //one tote, knockdown
-	lift to 1
-	wait until level reached
-	switch forward Harvester
-	harvest at -0.5; for 0.5
-	lift to 4
-	wait until off ground
-	drive at 0,0,80; for 2
-	drive to 0,-12,80; at 0.7
-	drive to 0,48,80; at 1 //slam RC
-	drive to 136,0,80; at 0.5 //move forward
-	switch reverse Harvester
-	lift to 1
-	reset gyro
+automode 1 //knockdown
+	sanic at -0.02,0,0; for 0.2
+	drive at -0.8,0,0; until distance=80
+	sanic at 1,0,0; for 0.3
+	reset gyro -90
 end
 
-automode 2 //screw zach moskow
+automode 2 //screw mac zoskow
 	switch reverse Harvester
 	lift to 4
 	wait for 2
@@ -86,13 +77,13 @@ automode 4 //move (from landfill side)
 	drive to 0,58,0; at 0.45
 	reset gyro 180 //ayy lmao
 end
--
+
 automode 5 //drive forward
 	lift to 0
 	drive to 0,144,0; at 0.3 //should be 72
 end
 
-automode 6 //Operation Binstorm (OLD AND SLOW)
+automode 6 //Operation Binstorm (OLD)
 	reset gyro
 	lift to 0
 	drive at -0.05,0,0; for 0.1
@@ -107,29 +98,43 @@ automode 6 //Operation Binstorm (OLD AND SLOW)
 	reset gyro -90
 end
 
-automode 7 //Operation Binstorm (Sanic Edition)
+automode 7 //Two-Can Toucan
+	reset gyro
+	sanic at -1,0,0; for 0.25
 	switch forward Hooks
-	sanic at -1,0,0; for 0.45
+	sanic at -1,0,0; for 0.3 
+	wait for 0.25
 	reset encoders
-	sanic at 1,0,0; until distance=82
-	sanic at -1,0,0; for 0.35
+	drive at 1,0,0; until distance=82 
+	drive at -1,0,0; for 0.35
 	switch reverse Hooks
 	reset gyro -90
 end
 
-automode 8 //move back from center forward
-	lift to 1
-	drive to 24,0,0; at 0.4
-	drive to 0,60,0; at 0.5
-	reset gyro 180
+
+automode 8 //Two-Can Toucan v2
+	reset gyro
+	sanic at -1,0,0; for 0.12
+	switch forward Hooks
+	sanic at -1,0,0; for 0.3 
+	wait for 0.2
+	reset encoders
+	drive at 1,0,0; until distance=82 
+	drive at -1,0,0; for 0.35
+	switch reverse Hooks
+	reset gyro -90
 end
 
-automode 9 //do nothing
+automode 9 //align wheels
+	sanic at -0.05,0,0; for 2
+end
+
+automode 10 //do nothing
 	lift to 0
 	reset gyro -90
 end
 
-automode 10 //secure tote
+automode 11 //secure tote
 	lift to 1
 	wait until level reached
 	switch forward Harvester
@@ -138,6 +143,22 @@ automode 10 //secure tote
 	lift to 4
 	wait until level reached
 	reset gyro 90
+end
+
+automode 12 //trololo left
+	drive at 0.5,0,0; for 0.65
+	drive at 0,-0.02,0; for 0.3
+	drive at 0,-0.6,0; until distance=160
+	drive at 0,1,0; for 0.32
+	reset gyro -90
+end
+
+automode 13 //trololo right
+	drive at 0.5,0,0; for 0.65
+	drive at 0,0.02,0; for 0.3
+	drive at 0,0.6,0; until distance=160
+	drive at 0,-1,0; for 0.32
+	reset gyro -90
 end
 
 //nonsense
