@@ -20,7 +20,7 @@ automode 1 //knockdown
 	reset gyro -90
 end
 
-automode 2 //screw mac zoskow
+automode 2 //failed three tote
 	switch reverse Harvester
 	lift to 4
 	wait for 2
